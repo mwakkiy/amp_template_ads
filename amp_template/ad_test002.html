@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html ⚡4ads>
 <head>
@@ -8,222 +7,22 @@
   <script async src="https://cdn.ampproject.org/amp4ads-v0.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <style amp-custom>  
-    body {
-	padding: 0px;
-	margin: 0;
-}
-
-a {
-	color: #464646;
-	text-decoration: none;
-}
-
-.maintext:hover {
-	color: #222;
-	text-decoration: underline;
-}
-
-.action:hover {
-	text-decoration: underline;
-}
-
-.dianomi_provider_short:hover {
-	text-decoration: underline;
-}
-
-.hero img {
-	display: none;
-}
-
-.wrapper {
-	font-family: Arial, Helvetica, Verdana;
-	height: 100px;
-	width: 100%;
-	margin-left: 0px;
-	width: 1px;
-	min-width: 100%;
-	width: 100%;
-}
-
-.hero {
-	float: left;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
-	padding: 0px;
-	position: relative;
-	width: 100%;
-	border-bottom: 0px solid #e3e3e3
-}
-
-.first {
-}
-
-.hero:nth-child(12) {
-	border-bottom: none;
-}
-
-.last {
-	border-bottom: none;
-}
-
-.subhero {
-	height: 30px;
-	margin-top: 5px;
-	padding-bottom: 0px;
-	text-align: left;
-	width: 100%;
-	border-bottom: 0px solid #e3e3e3;
-}
-
-.text {
-	font-family: 'Source Sans Pro', sans-serif;
-	height: 20px;
-	margin: 0 auto;
-	padding-top: 0px;
-	margin-top: 0px;
-	text-align: left;
-	width: 100%;
-}
-
-.heading_top {
-	display: none
-}
-
-.heading {
-	display: none;
-}
-
-.maintext {
-	color: #000;
-	font-family: "Oswald", Impact, sans-serif;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 19px;
-	padding: 0px 0px;
-	padding-bottom: 0px;
-	display: inline;
-	width: 100%;
-}
-
-.action {
-	display: none;
-}
-
-.dianomi_provider_short {
-	color: #999;
-	display: inline;
-	font-family: "Oswald", Impact, sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	padding-left: 0px;
-	text-decoration: none;
-}
-
-.dianomi_provider_short:before {
-	content: ""
-}
-
-.dianomi_provider_short:after {
-	content: ""
-}
-
-.sponsor {
-	display: none;
-}
-
-.sub-line2 {
-	overflow: hidden;
-	position: relative;
-	font-size: 10px;
-	height: 1.3em;
-	color: #ccc;
-	width: auto;
-	height: 12px;
-	padding-bottom: 0px;
-	z-index: 5;
-	float: left;
-	margin: 12px 0 2px 10px;
-}
-
-.sub-line2 a {
-	color: #999;
-}
-
-.sub-line2 img {
-	border: none;
-	outline: none;
-}
-
-.line2 {
-	padding: 0px;
-	margin-top: 0px;
-	font-size: 15px;
-	margin: 5px 0 2px;
-	text-transform: none;
-	color: #cc2936;
-	text-transform: uppercase;
-	width: auto;
-	font-family: "Oswald", Impact, sans-serif;
-	font-weight: normal;
-	position: relative;
-	margin-left: 0px;
-	float: left;
-	display: inline;
-}
-
-@media (max-width:480px) {
-	.hero {
-		width: 100%;
-	}
-
-	.hero.last {
-		display: none;
-	}
-
-	.maintext, .dianomi_provider_short {
-		font-size: 15px;
-		line-height: 18px;
-	}
-
-	.dianomi_provider_short {
-		display: inline;
-	}
-
-	.line2 {
-		margin: 0px 0 0px;
-	}
-
-	.sub-line2 {
-		margin: 6px 0 2px 10px;
-	}
-
-}
-
-
- </style>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-
 </head>
 <body>
+  <div>Ad template example</div>
   <template type="amp-mustache">
-    <div class="wrapper">
-      <div class="line2">{{ headline }} </div> <div class="sub-line2"><a href=":whats_this" target="_blank" title="dianomi"><amp-img class="dianomi-lg" src="//www.dianomi.com/img/dianomi-max-200x38.png" height="11" width="55"/></a></div> {{#ads}}
-      <div class="hero">
-      <div class="subhero">
-      <a class="dianomihref" href="{{ target_url }}">
-      <div class="text">
-         <div class="dianomiHeading heading">{{ Provider }}</div>
-         <div class="maintext">{{ Teaser }}</div>
-         <div class="dianomi_provider_short">{{ Provider }}</div>
+    <div>{{ headline }} </div> 
+    {{#ads}}
+      <div>
+        <a href="{{ link_url }}">
+          <div>
+            <div>{{ title }}</div>
+            <div>{{ body }}</div>
+            <div>{{ url }}</div>
+          </div>
+        </a>
       </div>
-      </a>
-      </div>
-      </div>
-      {{/ads}}
+    {{/ads}}
   </template>
-  <amp-analytics type="googleanalytics"></amp-analytics>
 </body>
 </html>
